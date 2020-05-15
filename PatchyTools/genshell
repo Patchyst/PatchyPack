@@ -3,7 +3,7 @@
 # https://github.com/Patchyst
 # https://github.com/Patchyst/PatchyPack
 DIR=$(dirname $0)
-if [[ -z $1 ]] && [[ -z $2 ]]; then
+if [[ $1 == "-h" ]] || [[ -z $1 ]] && [[ -z $2 ]]; then
 	echo -e "Desc: Used to generate a webshell"
 	echo -e "Required Usage: patchy genshell webshell_file webshell_name"
 	echo -e "Optional Usage: [-p]: set a password for php shell"
