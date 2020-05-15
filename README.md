@@ -22,4 +22,4 @@ Check out the options for Patchy Pack by typing:
 ```
 patchy
 ```
-Further Usage and examples can be found on: [Patchy gthub]: https://patchyst.github.io/
+Further Usage and examples can be found on: https://patchyst.github.io/
