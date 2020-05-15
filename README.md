@@ -23,3 +23,42 @@ Check out the options for Patchy Pack by typing:
 patchy
 ```
 Further Usage and examples can be found on: https://patchyst.github.io/
+
+# Cracking Hashes with Patchy Pack
+So far Patchyhash can crack a variety of hashing algorithims such as md5, sha512, sha256, sha224, sha1, sha384, and DES.
+ ## Usage and examples:
+```
+$ patchyhash -h
+
+usage: patchyhash [-h] [-ht HASH_TYPE] [-s SALT] [-va] [-v]
+                          hash_path dict_path
+
+positional arguments:
+  hash_path             Path to password hash file
+  dict_path             Path to password dictionary file
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -ht HASH_TYPE, --hash_type HASH_TYPE
+                        specify hash type
+  -s SALT, --salt SALT  There is a salt 0:2
+  -va, --viewall        View all passwords and hashes being compared. usage
+                        example: --viewall Y
+  -v, --version         show program's version number and exit
+```
+The positional arguments are required. The first is the path to the file containing the hash, the second, the wordlist for pathcyhash to check against. If no hashing algorithim is specified patchyhash defaults to md5
+Example:
+```
+patchyhash ~/md5password.txt ~/worlists/rockyou.txt
+```
+Optional arguments include salt, hash type, and an option to view all hashes being checked against target hash.
+```
+patchyhash ~/shapassword.txt ~/worlists/rockyou.txt --hast_type sha256 --viewall
+```
+* --viewall: view all hashes compared with target hash
+* --hash_type: specify hash type
+```
+patchyhash ~/shapassword.txt ~/worlists/rockyou.txt -ht sha256 -va
+```
+* -va: Same as view all
+* -ht: same as hashtype
