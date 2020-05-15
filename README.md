@@ -56,7 +56,7 @@ Optional arguments include salt, hash type, and an option to view all hashes bei
 patchyhash ~/shapassword.txt ~/worlists/rockyou.txt --hast_type sha256 --viewall
 ```
 * --viewall: view all hashes compared with target hash
-* --hash_type: specify hash type
+* --hash_type: specify hashing algorithim (in this case sha256)
 ```
 patchyhash ~/shapassword.txt ~/worlists/rockyou.txt -ht sha256 -va
 ```
