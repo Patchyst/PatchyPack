@@ -62,3 +62,13 @@ patchyhash ~/shapassword.txt ~/worlists/rockyou.txt -ht sha256 -va
 ```
 * -va: Same as view all
 * -ht: same as hashtype
+# Generating and Accessing Web Shell with Patchy Pack
+Before accessing a web shell we have to generate it. As of now. patchygen only generates php based webshells.
+```
+$ patchygen -h
+Desc: Used to generate a webshell
+Required Usage: patchy genshell webshell_file webshell_name
+Optional Usage: [-p]: set a password for php shell
+	example: patshy genshell shell.php shell -p passw0rd!
+		 patchy genshell /root/webshells/myshell.php nameofmyshell
+```
