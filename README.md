@@ -25,4 +25,5 @@ patchy
 Depending on your OS it may look slightly diffirent: 
 ### Mac OSX: 
 ![Image of patchy OSX](readme_images/PatchyOSX.png)
-
+### Kali Linux:
+![Image of patchy OSX](readme_images/patchy_pageOSX.png)
