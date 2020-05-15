@@ -6,6 +6,6 @@ cprint("[*]     Generate a webshell: patchygen", "red", attrs=['bold'])
 cprint("[*]     Access a webshell: patchyshell", "red", attrs=['bold'])
 cprint("[*]     Crack zip file password: patchyzip", "red", attrs=['bold'])
 cprint("[*]     Crack password hashes: patchyhash", "red", attrs=['bold'])
-cprint("[*]     Port sacnner: patchyscan", "red", attrs=['bold'])
+cprint("[*]     Port scanner: patchyscan", "red", attrs=['bold'])
 
 
