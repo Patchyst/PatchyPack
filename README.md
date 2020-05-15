@@ -22,3 +22,7 @@ Check out the options for Patchy Pack by typing:
 ```
 patchy
 ```
+Depending on your OS it may look slightly diffirent: 
+### Mac OSX: 
+![Image of patchy OSX](readme_images/patchy_pageOSX.png)
+
