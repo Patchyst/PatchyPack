@@ -9,7 +9,7 @@ import hashlib
 from termcolor import cprint
 import pyfiglet
 cprint(pyfiglet.figlet_format("Patchy's Hash Cracker"),'red', attrs=['bold'])
-cprint(pyfiglet.figlet_format("1.0 ", font="3x5"),'red', attrs=['blink'])
+cprint(pyfiglet.figlet_format("1.0 "),'red', attrs=['blink'])
 cprint("Compatible Hash Formats for 1.0: md5, sha512, sha256, sha224, sha1, sha384, DES", "magenta", attrs=['bold'])
 Aparser = argparse.ArgumentParser()
 Aparser.add_argument("hash_path", help="Path to password hash file", type=str)
