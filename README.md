@@ -22,8 +22,4 @@ Check out the options for Patchy Pack by typing:
 ```
 patchy
 ```
-Depending on your OS it may look slightly diffirent: 
-### Mac OSX: 
-![Image of patchy OSX](readme_images/PatchyOSX.png)
-### Kali Linux:
-![Image of patchy Kali Linux](readme_images/patchy_page.png)
+Further Usage and examples can be found on: [Patchy gthub]: https://patchyst.github.io/
