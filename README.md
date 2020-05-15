@@ -11,7 +11,7 @@ Note that you'll have to close and reopen the current shell session or run:
 ```
 source .bash_profile
 ```
-Bash profiles may vary
+Bash profiles may vary. 
 Next, run the make.py script for installing necessary dependencies and packages:
 ```
 python3 make.py
