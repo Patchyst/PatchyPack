@@ -46,7 +46,7 @@ optional arguments:
                         example: --viewall Y
   -v, --version         show program's version number and exit
 ```
-The positional arguments are required. The first is the path to the file containing the hash, the second, the wordlist for pathcyhash to check against. If no hashing algorithim is specified patchyhash defaults to md5
+The positional arguments are required. The first is the path to the file containing the target hash. The second positional argument is the wordlist for pathcyhash to check against. If no hashing algorithim is specified patchyhash defaults to md5
 Example:
 ```
 patchyhash ~/md5password.txt ~/worlists/rockyou.txt
