@@ -1,0 +1,28 @@
+#!/bin/bash
+DIR=$(cd $(dirname $0); pwd)
+ROOTDIR=$(ls -la ~)
+if [[ $ROOTDIR  == *".bashrc"* ]]; then
+	BASHP=".bashrc"
+elif [[ $ROOTDIR  == *".bash_profile"* ]]; then
+	BASHP=".bash_profile"
+elif [[ $ROOTDIR == *".profile"* ]]; then
+	BASHP=".profile"
+elif [[ $ROOTDIR == *".login"* ]]; then
+	BASHP=".login"
+elif [[ $ROOTDIR == *".bash_login"* ]]; then
+	BASHP=".bash_login"
+else
+	echo "[-] No profile for aliases found."
+	echo "[-] This may be due to no existing bash profile in root."
+	echo "Make a .bash_profile? [Y/N]"
+	read INPUT
+        $(touch ~/$INPUT)
+fi
+echo -e "# Aliases for Patchy Pack Beta" >> ~/$BASHP
+echo -e "alias patchy='python3 ${DIR}/fancypatchy.py'" >> ~/$BASHP
+echo -e "alias patchygen='bash ${DIR}/genshell'" >> ~/$BASHP
+echo -e "alias patchyshell='python3 ${DIR}/accessshell.py'" >> ~/$BASHP
+echo -e "alias patchyhash='python3 ${DIR}/fancypatchyhash.py'" >> ~/$BASHP
+echo -e "alias patchyzip='python3 ${DIR}/zipcracker.py'" >> ~/$BASHP
+echo -e " # --- --- " >> ~/$BASHP
+source ~/$BASHP

