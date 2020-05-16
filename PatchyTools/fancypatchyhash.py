@@ -30,7 +30,10 @@ def DESdictionaryattack(hashpass):
     dictionary_file = open(args.dict_path)
     for i in dictionary_file:
         word = i.strip("/n")
-        ucryptword = crypt.crypt(word, salt)
+        if args.salt:
+            ucryptword = crypt.crypt(word, salt)
+        else:
+            ucryptword = crypt.crypt(word)
         if view:
             print("[*] Attempting Hash: ", ucryptword, "for word: ", word)
         if ucryptword == hashpass:
@@ -103,7 +106,10 @@ def dictionaryattack():
 
 
 def main():
-    dictionaryattack()
+    try:
+        dictionaryattack()
+    except Exception as e:
+        print(e)
 
 if __name__ == '__main__':
     main()
