@@ -26,7 +26,7 @@ Check out the options for Patchy Pack by typing:
 ```
 patchy
 ```
-Further Usage and examples can be found on: https://patchyst.github.io/patchy/
+Further Usage and examples can be found on: https://patchyst.github.io/patchy/ (I haven't finished documentation on the tools yet :/)
 
 # Cracking Hashes with Patchy Pack
 So far Patchyhash can crack a variety of hashing algorithims such as md5, sha512, sha256, sha224, sha1, sha384, and DES.
