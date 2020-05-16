@@ -41,7 +41,6 @@ optional arguments:
   -h, --help            show this help message and exit
   -ht HASH_TYPE, --hash_type HASH_TYPE
                         specify hash type
-  -s SALT, --salt SALT  There is a salt 0:2
   -va, --viewall        View all passwords and hashes being compared. usage
                         example: --viewall Y
   -v, --version         show program's version number and exit
