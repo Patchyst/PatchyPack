@@ -30,6 +30,8 @@ def DESdictionaryattack(hashpass):
     dictionary_file = open(args.dict_path)
     for i in dictionary_file:
         word = i.strip("/n")
+        word = word.strip("\n")
+        word = word.replace(" ", "")
         if args.salt:
             ucryptword = crypt.crypt(word, salt)
         else:
