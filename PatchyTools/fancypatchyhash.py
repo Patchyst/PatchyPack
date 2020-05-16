@@ -15,28 +15,19 @@ Aparser = argparse.ArgumentParser()
 Aparser.add_argument("hash_path", help="Path to password hash file", type=str)
 Aparser.add_argument("dict_path", help="Path to password dictionary file", type=str)
 Aparser.add_argument("-ht", "--hash_type", help="specify hash type")
-Aparser.add_argument("-s", "--salt", help="There is a salt 0:2")
 Aparser.add_argument("-va", "--viewall", action="store_true", help=" View all passwords and hashes being compared. usage example: --viewall Y")
 Aparser.add_argument('-v', '--version', action='version', version='Patchy\'s Hash Cracker: 1.0')
 args = Aparser.parse_args()
 
 def DESdictionaryattack(hashpass):
-    if args.viewall:
-        view = True
-    else:
-        view = False
-    if args.salt:
-        salt = hashpass[0:2]
+     salt = hashpass[0:2]
     dictionary_file = open(args.dict_path)
     for i in dictionary_file:
         word = i.strip("/n")
         word = word.strip("\n")
         word = word.replace(" ", "")
-        if args.salt:
-            ucryptword = crypt.crypt(word, salt)
-        else:
-            ucryptword = crypt.crypt(word)
-        if view:
+        ucryptword = crypt.crypt(word, salt)
+        if args.viewall:
             print("[*] Attempting Hash: ", ucryptword, "for word: ", word)
         if ucryptword == hashpass:
             print("[+] Password found: ", word, "\n")
@@ -45,10 +36,6 @@ def DESdictionaryattack(hashpass):
     return
 
 def dictionaryattack():
-    if args.viewall:
-        view = True
-    else:
-        view = False
     counter = 1
     passwordfile = open(args.hash_path)
     dictionary_file = open(args.dict_path, "r", encoding="latin-1")
@@ -98,7 +85,7 @@ def dictionaryattack():
                 else:
                     pass
                 ucryptword = hashlib.md5(word.encode()).hexdigest()
-            if view:
+            if args.viewall:
                 print("[*] Attempting Hash: ", ucryptword, " for word: ", word)
             if ucryptword == line:
                 cprint("[+] Password found: " + word + "\n", "red", attrs=["bold"])
@@ -115,4 +102,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
