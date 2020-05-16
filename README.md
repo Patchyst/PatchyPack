@@ -8,11 +8,15 @@ After downloading the PatchyTools folder run the setup script for setting up ali
 chmod +rwx setup
 ./setup
 ```
+While you're in the PatchyTools directory give permissions to the genshell bash script. The script responsible for generating php webshells.
+```
+chmod +rwx genshell
+```
 Note that you'll have to close and reopen the current shell session or run:
 ```
 source .bash_profile
 ```
-Bash profiles may vary. 
+This will let the changes take effect. Bash profiles may vary. 
 Next, run the make.py script for installing necessary dependencies and packages:
 ```
 python3 make.py
