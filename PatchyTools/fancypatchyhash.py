@@ -30,7 +30,8 @@ def DESdictionaryattack(hashpass):
         if args.viewall:
             print("[*] Attempting Hash: ", ucryptword, "for word: ", word)
         if ucryptword == hashpass:
-            print("[+] Password found: ", word, "\n")
+            pass_msg = "[+] Password found: " + word
+            cprint(pass_msg, "red", attrs=["bold"])
             return word
     print("[-] No password found :c", " Try another word list?")
     return
