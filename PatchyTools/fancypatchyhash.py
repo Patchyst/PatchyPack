@@ -20,7 +20,7 @@ Aparser.add_argument('-v', '--version', action='version', version='Patchy\'s Has
 args = Aparser.parse_args()
 
 def DESdictionaryattack(hashpass):
-     salt = hashpass[0:2]
+    salt = hashpass[0:2]
     dictionary_file = open(args.dict_path)
     for i in dictionary_file:
         word = i.strip("/n")
