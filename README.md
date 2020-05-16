@@ -8,7 +8,7 @@ After downloading the PatchyTools folder run the setup script for setting up ali
 chmod +rwx setup
 ./setup
 ```
-While you're in the PatchyTools directory give permissions to the genshell bash script. The script responsible for generating php webshells.
+While you're in the PatchyTools directory give permissions to the genshell bash script. This script is responsible for generating php webshells.
 ```
 chmod +rwx genshell
 ```
