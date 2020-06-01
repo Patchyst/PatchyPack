@@ -70,10 +70,10 @@ Before accessing a web shell we have to generate it. As of now. patchygen only g
 ```
 $ patchygen -h
 Desc: Used to generate a webshell
-Required Usage: patchy genshell webshell_file webshell_name
+Required Usage: patchygen webshell_file webshell_name
 Optional Usage: [-p]: set a password for php shell
-	example: patchy genshell shell.php shell -p passw0rd!
-		 patchy genshell /root/webshells/myshell.php nameofmyshell
+	example: patchygen shell.php shell -p passw0rd!
+		 patchygen /root/webshells/myshell.php nameofmyshell
 ```
 To generate a simple php webshell with no password just give a the webshell file path and the desired shell name:
 ```
