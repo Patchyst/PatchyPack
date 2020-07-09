@@ -17,6 +17,7 @@ else
 	echo "Make a .bash_profile? [Y/N]"
 	read INPUT
         $(touch ~/$INPUT)
+	BASHP = ${INPUT}
 fi
 echo -e "# Aliases for Patchy Pack Beta" >> ~/$BASHP
 echo -e "alias patchy='python3 ${DIR}/fancypatchy.py'" >> ~/$BASHP
