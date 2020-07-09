@@ -14,7 +14,7 @@ elif [[ $ROOTDIR == *".bash_login"* ]]; then
 else
 	echo "[-] No profile for aliases found."
 	echo "[-] This may be due to no existing bash profile in root."
-	echo "Make a .bash_profile? [Y/N]"
+	echo "Enter Bash Profile name (include .): "
 	read INPUT
         $(touch ~/$INPUT)
 	BASHP = ${INPUT}
