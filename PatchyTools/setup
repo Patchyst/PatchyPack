@@ -20,7 +20,7 @@ else
 	BASHP = ${INPUT}
 fi
 echo -e "# Aliases for Patchy Pack Beta" >> ~/$BASHP
-echo -e "alias patchy='python3 ${DIR}/fancypatchy.py'" >> ~/$BASHP
+echo -e "alias patchy='python3 ${DIR}/patchy.py'" >> ~/$BASHP
 echo -e "alias patchygen='bash ${DIR}/genshell'" >> ~/$BASHP
 echo -e "alias patchyshell='python3 ${DIR}/accessshell.py'" >> ~/$BASHP
 echo -e "alias patchyhash='python3 ${DIR}/fancypatchyhash.py'" >> ~/$BASHP
