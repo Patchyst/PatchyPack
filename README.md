@@ -3,6 +3,9 @@ Patchy Pack [Alpa]. A set of command line tools for anything from port scanning 
 Patchy Pack is far from finished with many more updates, features, and bug fixes on the way.
 ## Reccomended OS: Linux
 # Installation
+
+#### DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. pip 21.0 will drop support for Python 2.7 in January 2021. More details about Python 2 support in pip, can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support
+
 After downloading the PatchyTools folder run the setup script for setting up aliases/shortcuts:
 ```
 chmod +rwx setup
