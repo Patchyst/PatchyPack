@@ -77,7 +77,7 @@ def TCP_scan(targethost, targetport):
     if args.timeout is not None:
         TCPconn.settimeout(args.timeout)
     else:
-        TCPconn.settimeout(0.1)
+        TCPconn.settimeout(0.5)
     if identify(targethost) == socket.AF_INET:
         TCPconn.connect((targethost, int(targetport)))
     elif identify(targethost) == socket.AF_INET6:
